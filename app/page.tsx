@@ -1,3 +1,12 @@
+import { useState } from 'react';
+import DomeGallery from '@/components/DomeGallery';
+import InteractionFlow from '@/components/InteractionFlow';
+
+export default function Home() {
+  const [showGallery, setShowGallery] = useState(false);
+
+  const userImages = [
+    '/1.jpg',
     '/2.jpg',
     '/3.jpg',
     '/4.jpg',
