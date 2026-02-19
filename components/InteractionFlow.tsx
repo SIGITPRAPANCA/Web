@@ -185,7 +185,7 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
 
     useEffect(() => {
         if (winner === 'X') {
-            setMessage("Kamu Memenangkan");
+            setMessage("YOU GOT");
             setTimeout(() => onComplete(), 3500); // Increased timeout to wait for staggered animation
         } else if (winner === 'O' || winner === 'draw') {
             setMessage(winner === 'draw' ? "Seri! Coba lagi yaa ❤️" : "Hampir! Sekali lagi...");
@@ -244,7 +244,7 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl font-playfair text-white text-center drop-shadow-lg mt-4"
                     >
-                        Hatiku
+                        MY HEART
                     </motion.h2>
                 )}
             </AnimatePresence>
@@ -340,7 +340,7 @@ const LoveMeterStep = ({ onComplete }: { onComplete: () => void }) => {
 
 // --- Step 4: Typewriter ---
 const TypewriterStep = ({ onComplete }: { onComplete: () => void }) => {
-    const text = "Happy Valentine!!!!";
+    const text = "THIS ALL IS PICT OF MY BEAUTIFUL GF!!!!!";
     const [displayedText, setDisplayedText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
 
