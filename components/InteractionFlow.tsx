@@ -339,7 +339,7 @@ const LoveMeterStep = ({ onComplete }: { onComplete: () => void }) => {
 
 // --- Step 4: Typewriter ---
 const TypewriterStep = ({ onComplete }: { onComplete: () => void }) => {
-    const text = "THIS ALL IS PICT OF MY BEAUTIFUL GF!!!!!";
+    const text = "THESE ARE ALL PICT OF MY BEAUTIFULL GF!!!!!";
     const [displayedText, setDisplayedText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
 
