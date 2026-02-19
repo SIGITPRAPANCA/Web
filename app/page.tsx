@@ -31,31 +31,7 @@ export default function Home() {
         <InteractionFlow onFlowComplete={() => setShowGallery(true)} />
       ) : (
         <>
-          import { useEffect, useRef } from "react";
-
-export default function Home() {
-  const audioRef = useRef(null);
-
-  useEffect(() => {
-    const playAudio = () => {
-      audioRef.current?.play();
-    };
-
-    document.addEventListener("click", playAudio, { once: true });
-
-    return () => {
-      document.removeEventListener("click", playAudio);
-    };
-  }, []);
-
-  return (
-    <audio
-      ref={audioRef}
-      src="/season.mp3"
-      loop
-    />
-  );
-          }
+         <audio src="/season.mp3" autoPlay loop className="hidden" />
           <DomeGallery
             images={userImages}
             fit={0.8}
