@@ -30,16 +30,12 @@ export default function Home() {
     setShowGallery(true);
 
     if (audioRef.current) {
-      audioRef.current.play().catch((err) => {
-        console.log("Autoplay diblokir:", err);
-      });
+      audioRef.current.play().catch(() => {});
     }
   };
 
   return (
     <main className="w-screen h-screen bg-[#060010] relative overflow-hidden">
-
-      {/* Audio (tidak pakai autoPlay lagi) */}
       <audio ref={audioRef} src="/season.mp3" loop />
 
       {!showGallery ? (
@@ -56,14 +52,6 @@ export default function Home() {
           autoRotationSpeed={0.1}
         />
       )}
-
     </main>
   );
-}        dragDampening={2}
-        grayscale={false}
-        autoRotationSpeed={0.1}
-      />
-    )}
-
-  </main>
-);
+}
