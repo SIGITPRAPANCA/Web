@@ -1,4 +1,4 @@
-'use client';
+audio client';
 
 import { useState } from 'react';
 import DomeGallery from '@/components/DomeGallery';
@@ -31,7 +31,31 @@ export default function Home() {
         <InteractionFlow onFlowComplete={() => setShowGallery(true)} />
       ) : (
         <>
-          <audio src="/season.mp3" autoPlay loop className="hidden" />
+          import { useEffect, useRef } from "react";
+
+export default function Home() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    const playAudio = () => {
+      audioRef.current?.play();
+    };
+
+    document.addEventListener("click", playAudio, { once: true });
+
+    return () => {
+      document.removeEventListener("click", playAudio);
+    };
+  }, []);
+
+  return (
+    <audio
+      ref={audioRef}
+      src="/season.mp3"
+      loop
+    />
+  );
+          }
           <DomeGallery
             images={userImages}
             fit={0.8}
