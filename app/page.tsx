@@ -1,14 +1,3 @@
-audio client';
-
-import { useState } from 'react';
-import DomeGallery from '@/components/DomeGallery';
-import InteractionFlow from '@/components/InteractionFlow';
-
-export default function Home() {
-  const [showGallery, setShowGallery] = useState(false);
-
-  const userImages = [
-    '/1.jpg',
     '/2.jpg',
     '/3.jpg',
     '/4.jpg',
@@ -31,7 +20,7 @@ export default function Home() {
         <InteractionFlow onFlowComplete={() => setShowGallery(true)} />
       ) : (
         <>
-         <audio src="/season.mp3" autoPlay loop className="hidden" />
+          <audio src="/season.mp3" autoPlay loop className="hidden" />
           <DomeGallery
             images={userImages}
             fit={0.8}
