@@ -37,10 +37,14 @@ export default function Home() {
 
       {!showGallery ? (
         <InteractionFlow
-          onFlowComplete={() => {
-            // nanti dari dalam InteractionFlow
-            // kita panggil tombolnya
-          }}
+          {!showGallery ? (
+  <InteractionFlow
+    onEnterGallery={handleEnterGallery}
+  />
+) : (
+  <Gallery />
+)}
+
           onEnterGallery={handleEnterGallery}
         />
       ) : (
