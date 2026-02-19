@@ -1,3 +1,4 @@
+"use client";
 import { useState } from 'react';
 import DomeGallery from '@/components/DomeGallery';
 import InteractionFlow from '@/components/InteractionFlow';
